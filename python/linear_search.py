@@ -17,4 +17,5 @@ def verify(index):
 numbers = range(1, 11)
 
 result = linear_search(numbers, 7)
+
 verify(result)
