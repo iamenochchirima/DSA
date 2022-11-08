@@ -22,6 +22,6 @@ def verify(index):
 
 numbers = range(1, 11)
 
-result = binary_search(numbers, 10)
+result = binary_search(numbers, 7)
 
 verify(result)
