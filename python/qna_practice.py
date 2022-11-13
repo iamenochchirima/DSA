@@ -25,4 +25,6 @@ test = {
     'output': 3
 }
 
+locate_card(**test['input']) == test['output']
+
 locate_card() 
