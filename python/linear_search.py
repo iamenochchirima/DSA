@@ -14,7 +14,7 @@ def verify(index):
     else:
         print("Target not found in list")
 
-numbers = range(1, 11)
+numbers = range(0)
 
 result = linear_search(numbers, 7)
 
