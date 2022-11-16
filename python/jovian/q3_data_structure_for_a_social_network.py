@@ -9,16 +9,6 @@ You can assume that usernames are unique.
 
 Problem: We need to create datastructure which can store 100 million records and perform insertion,
  search, update and list operations efficiently.
-
- Input examles:
-
-aakash = User('aakash', 'Aakash Rai', 'aakash@example.com')
-biraj = User('biraj', 'Biraj Das', 'biraj@example.com')
-hemanth = User('hemanth', 'Hemanth Jain', 'hemanth@example.com')
-jadhesh = User('jadhesh', 'Jadhesh Verma', 'jadhesh@example.com')
-siddhant = User('siddhant', 'Siddhant Sinha', 'siddhant@example.com')
-sonaksh = User('sonaksh', 'Sonaksh Kumar', 'sonaksh@example.com')
-vishal = User('vishal', 'Vishal Goel', 'vishal@example.com')
 """
 
 class User:
