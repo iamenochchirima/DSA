@@ -30,7 +30,6 @@ tree_tuple = ((1,3,None),2,((None,3,4),5,(6,7,8)))
 def parse_tuple(data):
     
     if isinstance(data, tuple) and len(data) == 3:
-        print(data)
         node = TreeNode(data[1])
         node.left = parse_tuple(data[0])
         node.right = parse_tuple(data[2])
@@ -61,5 +60,76 @@ def tree_to_tuple(node):
     else:
         return node
 
+"""
+A function to display the tree structure
+"""
 
-print(tree_to_tuple(tree2))
+def display_keys(node, space='\t', level=0):
+    # print(node.key if node else None, level)
+    
+    # If the node is empty
+    if node is None:
+        print(space*level + '∅')
+        return   
+    
+    # If the node is a leaf 
+    if node.left is None and node.right is None:
+        print(space*level + str(node.key))
+        return
+    
+    # If the node has children
+    display_keys(node.right, space, level+1)
+    print(space*level + str(node.key))
+    display_keys(node.left,space, level+1) 
+
+def travers_in_order(node):
+    if node is None:
+        return []
+    return (
+        travers_in_order(node.left) + 
+        [node.key] +
+        travers_in_order(node.right)
+    )   
+
+def travers_pre_order(node):
+    if node is None:
+        return []
+    return (
+        [node.key] +
+        travers_pre_order(node.left) + 
+        travers_pre_order(node.right)
+    )  
+
+def travers_post_order(node):
+    if node is None:
+        return []
+    return (
+        travers_post_order(node.left) + 
+        travers_post_order(node.right) +
+        [node.key]
+    )  
+
+"""
+QUESTION: Write a function to calculate the height/depth of a binary tree
+"""
+
+def tree_height(node):
+    if node is None:
+        return 0
+    return 1 + max(tree_height(node.left), tree_height(node.right))
+
+print(tree_height(tree2))
+
+"""
+QUESTION: Write a function to calculate the height/depth of a binary tree
+"""
+
+def treeSize(node):
+
+    if node is None:
+        return 0
+    return 1 + treeSize(node.left) + treeSize(node.right)
+
+""" 
+Encapsulation everything
+"""
