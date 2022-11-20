@@ -50,7 +50,7 @@ class UserDatabase:
     def list_all(self):
         return self.users
 
-aakash = User('aakash', 'Aakash Rai', 'aakash@example.com')
+names = aakash = User('aakash', 'Aakash Rai', 'aakash@example.com')
 biraj = User('biraj', 'Biraj Das', 'biraj@example.com')
 hemanth = User('hemanth', 'Hemanth Jain', 'hemanth@example.com')
 enoch = User('enoch', 'Enoch Chirima', 'enoch@gmaiil.com')

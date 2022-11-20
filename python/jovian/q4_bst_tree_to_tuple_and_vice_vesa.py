@@ -1,3 +1,5 @@
+from q3_data_structure_for_a_social_network import User, UserDatabase
+
 """
 QUESTION: Implement a binary tree using Python, and show its usage with some examples.
 
@@ -225,4 +227,35 @@ def is_bst(node):
         
     return is_bst_node, min_key, max_key
 
-print(is_bst(tree2))
+"""
+Storing Key-Value Pairs using BSTs 
+"""
+
+class BSTNode():
+    def __init__(self, key, value=None):
+        self.key = key
+        self.value = value
+        self.left = None
+        self.right = None
+        self.parent = None
+
+# Level 0
+
+names = aakash = User('aakash', 'Aakash Rai', 'aakash@example.com')
+biraj = User('biraj', 'Biraj Das', 'biraj@example.com')
+hemanth = User('hemanth', 'Hemanth Jain', 'hemanth@example.com')
+enoch = User('enoch', 'Enoch Chirima', 'enoch@gmaiil.com')
+siddhant = User('siddhant', 'Siddhant Sinha', 'siddhant@example.com')
+sonaksh = User('sonaksh', 'Sonaksh Kumar', 'sonaksh@example.com')
+vishal = User('vishal', 'Vishal Goel', 'vishal@example.com')
+
+#Level 0
+tree = BSTNode(enoch.username, enoch) 
+
+# Level 1
+tree.left = BSTNode(biraj.username, biraj)
+tree.left.parent = tree
+tree.right = BSTNode(sonaksh.username, sonaksh)
+tree.right.parent = tree
+
+print(display_keys(tree))
