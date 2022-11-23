@@ -123,7 +123,7 @@ def tree_height(node):
 print(tree_height(tree2))
 
 """
-QUESTION: Write a function to calculate the height/depth of a binary tree
+QUESTION: Write a function to count the number of nodes in a binary tree
 """
 
 def treeSize(node):
