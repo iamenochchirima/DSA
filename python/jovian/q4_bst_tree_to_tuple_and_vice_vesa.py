@@ -21,6 +21,18 @@ tree = parse_turple(tree_turple)
 
 print(tree)
 
+def tree_to_tuple(node):
+    if isinstance(node, TreeNode):
+        if node.left is None and node.right is None:
+            return node.key
+        return (
+            tree_to_tuple(node.left),
+            node.key,
+            tree_to_tuple(node.right)
+        )
+    return node
+
+
 
 # from q3_data_structure_for_a_social_network import User, UserDatabase
 
